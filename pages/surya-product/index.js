@@ -11,7 +11,7 @@ import {
   Badge,
 } from "reactstrap";
 
-const index = () => {
+const Index = () => {
   const [product, setAllProduct] = useState(null);
 
   useEffect(() => {
@@ -27,8 +27,14 @@ const index = () => {
         {product &&
           product.products.map((items) => {
             return (
-              <Col sm="6" lg="6" xl="3" className="  py-4 bg-success">
-                <Card key={items.id} className="bg-light shadow">
+              <Col
+                sm="6"
+                lg="6"
+                xl="3"
+                key={items.id}
+                className="   py-4 bg-success"
+              >
+                <Card className="bg-light shadow">
                   <CardBody className="p-4">
                     <img
                       width={"100%"}
@@ -80,4 +86,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
